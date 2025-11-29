@@ -1,5 +1,5 @@
 ---
-title: "TITLE OF YOUR PROJECT"
+title: "The Correlation Between Global Happiness, Ice Extent and Covid Cases"
 subtitle: "Exploring Disparate Data: Part 3 - Final Report"
 author: "data100 is my personal hell"
 date: "Due November 26th, 2025"
@@ -21,6 +21,7 @@ knitr::opts_chunk$set(
   message = FALSE
 )
 ```
+
 
 # Data Description
 
@@ -130,3 +131,4 @@ The easiest way is to use Rmd's [footnote](https://bookdown.org/yihui/rmarkdown/
 Alternatively, you could make a list of citations with their main arguments and why they're relevent to your insights, methods, etc.
 
 The link above also references "bibtex" files. These are also extremely convenient, but have a steep learning curve and they make it difficult to tie them to an insight. If you use bibtext, then make sure that you provide a sentence to describe the source and it's relevance when you cite it - don't just add citations to the end of a sentence (this is common practice in academia, but I want to know that your citations are directly relevant for this assignmnet).
+

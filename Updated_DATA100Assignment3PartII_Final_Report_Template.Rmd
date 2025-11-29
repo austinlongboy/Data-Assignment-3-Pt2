@@ -11,7 +11,7 @@ output:
 List your group members, including their student numbers, here:
 
 -   Austin Liu 169135314
--   
+-   Franco Mejia Batres 169112259
 -   
 
 ```{r setup, include=FALSE}
@@ -21,7 +21,19 @@ knitr::opts_chunk$set(
   message = FALSE
 )
 ```
+Abstract
 
+This paper intends to explore the significance of a relationship between world happiness, polar ice extents and cases of COVID-19 through three compiled variables from three publicly accessible datasets. The three compiled datasets are from the World Happiness Report (happiness.parquet), ice extent by hemispherical determined compiled data over the year, compiled and averaged, (ice_extent_yearly.parquet) and COVID-19 globally totals for 2020 (covid_2020.parquet). These three variables were subsequently cleaned, merged and assessed through relative descriptive and correlational analyses to statistically assess any measure of relationship between the variables. Ultimately, significant findings yielded findings relatively weak in strength (.3-.4) to moderate (.5) holdings in some regions - although not everywhere. Thus the less happiness holds reported relative to life the more polar ice and COVID-19 cases suggesting that globally, life, climate and health have increasingly happy factors as well. Yet the fact that these findings come from a merged data point of view in a compiled effort from COVID-19 compiled findings from 2020 per country suggests this is not overly meaningful except for the fact that these environmental/epidemiological/social stressors exist, en masse, across the globe - all at once.
+
+Introduction
+
+21st century global stressors have plagued life in the 21st century and subsequently, impact life in the 21st century - global pandemics have risen with COVID-19 and climate change has determined a reduced polar ice extent and subsequently reduced ice extents per year (per annum) due to increased temperature determined changes over time for millions of people. Thus, social and economic life has changed across nations for billions of people in transition and simultaneously, decimal derived compiled data on ice extents have emerged over time per hemisphere based on annualized averages (increase or decrease based on temperature). Yet the third facet of this worldwide simultaneous experience is connected to a happiness report as compiled data has emerged over time linking various nations to a world's happiness score.
+
+Thus establishing a relationship based on health-based stressors, climate-based stressors and social stressors as assessed over time internationally adds significance to the intersectional nature of how these three variables are more the same than different. This is an exploratory endeavor to take three variables from three compiled datasets which have been derived from three publicly available aggregate datasets relative to this idea. The first variable is the average cases of COVID-19 per nation based on a derived one year (2020) total. The second variable is the world's happiness score based on a life ladder indicator which compiles various assessed responses for happiness means per nation (or continental average for this exploratory study). The third variable is ice extent year or annualized averages based on hemispherical data collection.
+
+Thus these three variables will be assessed through data cleaning, merging, visualization and correlational testing all completed within RStudio to determine any significance relative to one another. Since these are compiled efforts, causation cannot be determined beyond causal association where international borders rarely cross relative to health, climate and happiness holds as data comes from various sources.
+
+Ultimately, limitations relative to findings will be assessed based on significances found such as an imperfect dataset temporally derived assessed through a continental basis once merged for relative findings to determine whether these findings are reasonable and valid within a reasonable range relative to research conclusions.
 
 # Data Description
 
@@ -131,4 +143,5 @@ The easiest way is to use Rmd's [footnote](https://bookdown.org/yihui/rmarkdown/
 Alternatively, you could make a list of citations with their main arguments and why they're relevent to your insights, methods, etc.
 
 The link above also references "bibtex" files. These are also extremely convenient, but have a steep learning curve and they make it difficult to tie them to an insight. If you use bibtext, then make sure that you provide a sentence to describe the source and it's relevance when you cite it - don't just add citations to the end of a sentence (this is common practice in academia, but I want to know that your citations are directly relevant for this assignmnet).
+
 

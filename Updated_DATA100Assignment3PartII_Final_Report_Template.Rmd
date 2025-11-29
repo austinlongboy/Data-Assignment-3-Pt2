@@ -53,8 +53,7 @@ To clean this dataset, I would start by assessing all variables for missing valu
 # with your data, which makes it easier to describe below!
 ```
 
-The data come from \<<place>\> and describe \<<more specific description of the data>\>.
-
+This dataset (from the National Hurricane Center) is a panel of time-series data observed by month over a period of multiple years successively. Each row represents a different time-series (station, region, variable, etc.) and each column represents a different calendar month over the years assessed (1978 through 2025). As the columns only show the months in the header relative to the year, and each column holds the monthly value for that year, this is essentially wide time-series data. At the end of each row, two summary statistics are provided - the 1981-2010 mean and the 1981-2010 median - which represent long-term climatological averages for the monthly data over the 30 year reference period for that particular row. The data seems to be continuous numbers (temperature, precipitation or similar monthly related variables) with NAs for non-essential months for earlier years. Overall this is a wide time-series panel of observed monthly data for almost 50 years with summary statistics of considerations for long-term averages.
 In order to clean the data, we \<\<steps to clean the data, concise but precise enough that a reader could follow your steps without seeing your code\>\>.
 
 ## Ice extent: ice_extent_yearly.parquet
@@ -67,7 +66,7 @@ In order to clean the data, we \<\<steps to clean the data, concise but precise 
 # completely necessary
 ```
 
-The data come from \<<place>\> and detail \<<more specific description of the data>\>.
+The dataset is an extensive, daily, country-level, time-series of COVID-19 case, testing and vaccination and socio-demographic variables. Therefore, each entry relates to a specific country over a specific day relative to an ISO code and continent; geographical location and temporal extent. Within the dataset, daily, temporal epidemiological variables of interest to this project include totals confirmed cases, new confirmed cases, totals deaths and new deaths, smoothed deaths and cases, deaths per million and cases per million and smoothed deaths and cases per million. The health systems variables of interest are ICU patients, hospital patients and weekly admissions calculated relative to a reproduced rate. The testing totals variables include total tests administered, new tests smoothed total tests, positivity rate and tests per case. The vaccination rollouts variables include total vaccinations, numbers vaccinated, numbers fully vaccinated, number of booster doses, new vaccinations, vaccinations per one hundred or one million. A stringency index is included to relate how stringent public policy has been relative to a government-based approach to COVID-19 over time. In addition, countries are associated with various socio-demographic variables - population size and density, age structure (0-14; 65+), GDP per capita, poverty measures, prevalence measures relative to health systems response - beds per 1,000 residents at 4 different time intervals - expected years life at birth and human development index - sexed age structure extrapolates excess mortality measures. Thus, this dataset links dynamic, time-restricted measures of the pandemic with more stable measures (unlikely to change from day to day - and within the day - and daily measures not likely to change) as well as stable demographic measures per country for an all-encompassing, extensive study of COVID-19 trends.
 
 In order to clean the data, we \<\<steps to clean the data, concise but precise enough that a reader could follow your steps without seeing your code\>\>
 
@@ -151,5 +150,6 @@ The link above also references "bibtex" files. These are also extremely convenie
 https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
 https://covid.ourworldindata.org/data/owid-covid-data.csv
 https://worldhappiness.report/ed/2023/#appendices-and-data
+
 
 

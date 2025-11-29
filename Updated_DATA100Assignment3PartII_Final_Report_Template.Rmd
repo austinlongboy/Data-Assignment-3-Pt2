@@ -37,6 +37,10 @@ Ultimately, limitations relative to findings will be assessed based on significa
 
 # Data Description
 
+This dataset contains the variables for the World Happiness Report's developed model of national life-evaluation ("ladder") scores. Thus this dataset contains the developed score for each nation for predicted happiness, measures of statistical error (standard error and upper and lower whisker of the confidence interval), the main predictors that help explain differences in happiness at the country level (logged GDP per capita - social circumstances - social support, healthy life expectancy - health outcomes - freedom to make life choices - personal agency - generosity - prosocial behavior - and perceived corruption - institutional trust). For these four predictors, it also contains the extent to which these variables are used to help create a generalized predicted happiness score for each nation in the "Explained by" columns. Finally, it contains a baseline value for "Dystopia" (the model's reference minimum for predicted happiness) and a "Dystopia + residual" which shows how much is left from the predicted happiness score by accounting for all these explanations. In this way, the predicted happiness score for each nation can be disaggregated into component pieces that drive it.
+
+To clean this dataset, I would start by assessing all variables for missing values and variances. For example, since the most pertinent variables come from the predictor columns and the Explains by components, I would fill in what's missing or remove cases if the missing values are too much to handle. I'd examine logged GDP per capita, social support, life expectancy, and contributions for appropriate numerical presentation - for example, if they are text instead - and decimal points for consistency. I'd also rewrite variable names for consistency (spaces to _ or unique variable designations that are aligned throughout the study) to render the dataset accessible. In addition, I would assess that each observation is not compiled per country/year for ease of coding due to no duplications. I would assess extreme values for appropriateness or typographical errors - like, is generosity ever -3 or is that a typo? - and assess patterns (if perceiving corruption is -3 across the board, that's plausible; if everyone has 102 years of life - unrealistic - then it's a typo). Finally, I'd assess relative variables for appropriateness (the total ladder score should feasibly accommodate how the other 4 Explains components pan out and the Dystopia + residual should equal how the model says it should. Once these assessments are made and corrections, if necessary, tidied up, all variables will be cleaned and suitable for appropriate modeling.
+
 ## World Happiness Report (happiness.parquet)
 
 ```{r load_data1}
@@ -120,7 +124,7 @@ Finally, Figure \@ref(fig:insight3) shows ...
 ```{r insight3, fig.height=4, fig.width=6, fig.cap="This is a figure caption that you will need to change in order to get good marks in the visualization rubric items."}
 ```
 
-# Conclusion and Future Work
+# Conclusion and Future Work - Franco
 
 Overall, we found \<<general ideas>\>.
 
@@ -144,5 +148,8 @@ Alternatively, you could make a list of citations with their main arguments and 
 
 The link above also references "bibtex" files. These are also extremely convenient, but have a steep learning curve and they make it difficult to tie them to an insight. If you use bibtext, then make sure that you provide a sentence to describe the source and it's relevance when you cite it - don't just add citations to the end of a sentence (this is common practice in academia, but I want to know that your citations are directly relevant for this assignmnet).
 
+https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
+https://covid.ourworldindata.org/data/owid-covid-data.csv
+https://worldhappiness.report/ed/2023/#appendices-and-data
 
 

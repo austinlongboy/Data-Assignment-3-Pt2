@@ -37,7 +37,7 @@ Ultimately, limitations relative to findings will be assessed based on significa
 
 # Data Description
 
-## \<\<Data Set 1\>\>
+## World Happiness Report (happiness.parquet)
 
 ```{r load_data1}
 # Put in your code to load in the data set, along with any
@@ -53,7 +53,7 @@ The data come from \<<place>\> and describe \<<more specific description of the 
 
 In order to clean the data, we \<\<steps to clean the data, concise but precise enough that a reader could follow your steps without seeing your code\>\>.
 
-## \<\<Data Set 2\>\>
+## Ice extent: ice_extent_yearly.parquet
 
 ```{r load_data2}
 # Put in your code to load in the data set, along with any
@@ -67,7 +67,7 @@ The data come from \<<place>\> and detail \<<more specific description of the da
 
 In order to clean the data, we \<\<steps to clean the data, concise but precise enough that a reader could follow your steps without seeing your code\>\>
 
-## \<\<Data Set 3\>\>
+## Covid 2020 Cases: covid_2020.parquet
 
 ```{r load_data3}
 # Put in your code to load in the data set, along with any
@@ -143,5 +143,6 @@ The easiest way is to use Rmd's [footnote](https://bookdown.org/yihui/rmarkdown/
 Alternatively, you could make a list of citations with their main arguments and why they're relevent to your insights, methods, etc.
 
 The link above also references "bibtex" files. These are also extremely convenient, but have a steep learning curve and they make it difficult to tie them to an insight. If you use bibtext, then make sure that you provide a sentence to describe the source and it's relevance when you cite it - don't just add citations to the end of a sentence (this is common practice in academia, but I want to know that your citations are directly relevant for this assignmnet).
+
 
 

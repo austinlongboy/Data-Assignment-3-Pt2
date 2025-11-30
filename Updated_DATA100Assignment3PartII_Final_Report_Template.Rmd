@@ -178,15 +178,12 @@ ggplot(ice_clean, aes(x = hemisphere, y = Extent, fill = hemisphere)) +
   theme_minimal() +
   theme(legend.position = "none")
 
-final_join <- covid_happy |>
-  left_join(ice_clean |> select(hemisphere, Extent), by = "hemisphere")
-
-ggplot(final_join, aes(x = Extent, y = score)) +
-  geom_point(alpha = 0.6) +
+ggplot(happiness_clean, aes(x = score)) +
+  geom_histogram(binwidth = 0.5, fill = "steelblue", color = "white", alpha = 0.8) +
   labs(
-    title = "Happiness Score vs Sea Ice Extent",
-    x = "Ice Extent (North/South Hemisphere)",
-    y = "Happiness Score"
+    title = "Distribution of Happiness Scores Across Countries",
+    x = "Happiness Score",
+    y = "Number of Countries"
   ) +
   theme_minimal()
 
@@ -213,6 +210,27 @@ This insight is supported by the summary statistics in Table \@ref(tab:summary_s
 # is convenient for making nice tables. Other packages can
 # do much fancier things with tables, but keep in mind that
 # the insights should be the star, not the formatting.
+
+
+library(dplyr)
+
+covid_happy_summary <- covid_happy |>
+  summarize(
+    count = n(),
+    mean_score = mean(score, na.rm = TRUE),
+    median_score = median(score, na.rm = TRUE),
+    min_score = min(score, na.rm = TRUE),
+    max_score = max(score, na.rm = TRUE),
+    sd_score = sd(score, na.rm = TRUE),
+    mean_cases = mean(total_cases, na.rm = TRUE),
+    median_cases = median(total_cases, na.rm = TRUE),
+    min_cases = min(total_cases, na.rm = TRUE),
+    max_cases = max(total_cases, na.rm = TRUE),
+    sd_cases = sd(total_cases, na.rm = TRUE)
+  )
+
+covid_happy_summary
+
 ```
 
 The next insight that we found is shown in Figure \@ref(fig:insight2).
@@ -254,6 +272,7 @@ The link above also references "bibtex" files. These are also extremely convenie
 https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
 https://covid.ourworldindata.org/data/owid-covid-data.csv
 https://worldhappiness.report/ed/2023/#appendices-and-data
+
 
 
 

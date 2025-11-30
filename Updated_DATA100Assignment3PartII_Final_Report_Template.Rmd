@@ -148,6 +148,42 @@ In order to clean the data, we \<\<steps to clean the data, concise but precise 
 
 Explain how any combinations of data were performed. Explain what kind of join was needed, whether columns had to be modified (for example, matching "country" names.)
 
+# Join the datasets
+covid_happy <- covid_clean |>
+  left_join(happiness_clean, by = "country")
+
+# Plot
+ggplot(covid_happy, aes(x = total_cases, y = score)) +
+  geom_point(alpha = 0.6) +
+  labs(
+    title = "Happiness Score vs Total COVID Cases",
+    x = "Total COVID Cases",
+    y = "Happiness Score"
+  ) +
+  theme_minimal()
+
+ggplot(ice_clean, aes(x = hemisphere, y = Extent, fill = hemisphere)) +
+  geom_col() +
+  labs(
+    title = "Sea Ice Extent by Hemisphere (Most Recent Observation)",
+    x = "Hemisphere",
+    y = "Ice Extent"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+final_join <- covid_happy |>
+  left_join(ice_clean |> select(hemisphere, Extent), by = "hemisphere")
+
+ggplot(final_join, aes(x = Extent, y = score)) +
+  geom_point(alpha = 0.6) +
+  labs(
+    title = "Happiness Score vs Sea Ice Extent",
+    x = "Ice Extent (North/South Hemisphere)",
+    y = "Happiness Score"
+  ) +
+  theme_minimal()
+
 # Exploratory Data Analysis
 
 To achieve our goals, we explored the data by...
@@ -213,6 +249,7 @@ The link above also references "bibtex" files. These are also extremely convenie
 https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
 https://covid.ourworldindata.org/data/owid-covid-data.csv
 https://worldhappiness.report/ed/2023/#appendices-and-data
+
 
 
 

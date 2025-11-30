@@ -44,6 +44,13 @@ To clean this dataset, I would start by assessing all variables for missing valu
 ## World Happiness Report (happiness.parquet)
 
 ```{r load_data1}
+happiness_clean <- happiness |>
+  rename(
+    country = country_name,
+    score   = ladder_score
+  )
+
+happiness_clean
 # Put in your code to load in the data set, along with any
 # necessary cleaning beyond what was done in Part 1
 
@@ -59,6 +66,40 @@ In order to clean the data, we \<\<steps to clean the data, concise but precise 
 ## Ice extent: ice_extent_yearly.parquet
 
 ```{r load_data2}
+library(dplyr)
+library(readr)
+library(stringr)
+
+url_north <- "https://noaadata.apps.nsidc.org/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv"
+url_south <- "https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/S_seaice_extent_daily_v4.0.csv"
+
+ice_north <- read_csv(url_north, show_col_types = FALSE) |>
+  mutate(hemisphere = "north")
+
+ice_south <- read_csv(url_south, show_col_types = FALSE) |>
+  mutate(hemisphere = "south")
+
+ice_clean <- bind_rows(ice_north, ice_south) |>
+  mutate(
+    Year  = as.integer(Year),
+    Month = as.integer(Month),
+    Day   = as.integer(Day),
+    Extent = as.numeric(Extent),
+    hemisphere = str_to_lower(hemisphere)
+  ) |>
+  group_by(hemisphere) |>
+  filter(
+    Year  == max(Year,  na.rm = TRUE)
+  ) |>
+  filter(
+    Month == max(Month, na.rm = TRUE)
+  ) |>
+  filter(
+    Day   == max(Day,   na.rm = TRUE)
+  ) |>
+  ungroup()
+
+ice_clean
 # Put in your code to load in the data set, along with any
 # necessary cleaning beyond what was done in Part 1
 
@@ -73,6 +114,28 @@ In order to clean the data, we \<\<steps to clean the data, concise but precise 
 ## Covid 2020 Cases: covid_2020.parquet
 
 ```{r load_data3}
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(arrow)
+
+covid_2020 <- read.csv("owid-covid-data.csv")
+covid_2020
+covid_19 <-covid_2020 |>
+  rename(
+    country = location,
+    year    = date
+  ) |>
+  filter(
+    !country %in% c(
+      "Africa", "Asia", "Europe", "North America", "South America",
+      "Oceania", "European Union")) |>
+  group_by(country) |>
+  slice_max(order_by = year, n = 1, with_ties = FALSE) |>
+  ungroup()
+
+covid_19
+
 # Put in your code to load in the data set, along with any
 # necessary cleaning beyond what was done in Part 1
 ```
@@ -150,6 +213,7 @@ The link above also references "bibtex" files. These are also extremely convenie
 https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
 https://covid.ourworldindata.org/data/owid-covid-data.csv
 https://worldhappiness.report/ed/2023/#appendices-and-data
+
 
 
 

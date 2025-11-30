@@ -224,14 +224,13 @@ Finally, Figure \@ref(fig:insight3) shows ...
 
 # Conclusion and Future Work - Franco
 
-Overall, we found \<<general ideas>\>.
+Overall, we found that countries’ happiness scores show some association with both COVID-19 cases and environmental factors like sea ice extent. The scatterplot of happiness versus total COVID cases suggested that countries with higher case counts tended to have lower reported happiness, though the relationship is not strictly linear. The comparison of ice extent across hemispheres highlighted the substantial difference between the northern and southern hemispheres, which allowed us to assign environmental exposure to countries and compare it against their happiness scores.
 
-A second paragraph about our findings.
+A second observation from the data is that, when combining happiness with ice extent by hemisphere, there appears to be only a weak relationship between environmental factors measured here and reported happiness, suggesting that other socio-economic and cultural factors may dominate the perception of well-being in different countries. The differences between hemispheres may also reflect regional clustering rather than causal effects of ice extent.
 
-The next steps in this analysis are...
+The next steps in this analysis are to expand the environmental indicators to include additional climate or pollution measures, and to incorporate temporal trends to see how happiness, COVID-19 impact, and environmental factors co-vary over time. Additional regression analyses or multivariate models could help quantify the relative contribution of health and environmental factors to happiness more precisely.
 
-The limitations of this analysis are as follows. (Do not simply list potential issues with sampling, but relate them to your analysis and how they affect your conclusions. An honest and complete acknowledgement of the limitations makes the analysis more trustworthy.)
-
+The limitations of this analysis are as follows. First, the ice extent data are aggregated at the hemisphere level, which limits the granularity and may obscure local environmental conditions experienced by each country. Second, COVID-19 case counts vary in reliability and reporting across countries, which could bias the apparent relationship with happiness. Third, the happiness dataset is cross-sectional and reflects only the most recent observation per country, which prevents analysis of trends or lagged effects. These limitations mean that any observed relationships should be interpreted as descriptive rather than causal, and they underscore the need for more detailed, temporally aligned datasets to draw stronger conclusions.
 # References
 
 I am not strict about MLA or APA style or anything like that. For this report, I would much rather have your citations be easy to match to your insights.
@@ -249,6 +248,7 @@ The link above also references "bibtex" files. These are also extremely convenie
 https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
 https://covid.ourworldindata.org/data/owid-covid-data.csv
 https://worldhappiness.report/ed/2023/#appendices-and-data
+
 
 
 

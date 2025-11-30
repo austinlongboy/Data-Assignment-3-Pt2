@@ -231,6 +231,8 @@ covid_happy_summary <- covid_happy |>
 
 covid_happy_summary
 
+The summary statistics reveal that, across all countries, the average happiness score is moderate, with most countries clustering near the median, while a few outliers report particularly high or low scores. Total COVID-19 cases show much greater variation, with some countries experiencing very high case counts and others relatively few. The standard deviation in COVID cases is substantially larger than that for happiness scores, highlighting wide disparities in pandemic impact. Overall, while happiness scores are fairly consistent globally, COVID-19 cases vary dramatically, suggesting that pandemic exposure alone may not fully explain differences in reported well-being.
+
 ```
 
 The next insight that we found is shown in Figure \@ref(fig:insight2).
@@ -272,6 +274,7 @@ The link above also references "bibtex" files. These are also extremely convenie
 https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
 https://covid.ourworldindata.org/data/owid-covid-data.csv
 https://worldhappiness.report/ed/2023/#appendices-and-data
+
 
 
 

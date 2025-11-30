@@ -184,8 +184,7 @@ ggplot(ice_clean, aes(x = hemisphere, y = Extent, fill = hemisphere)) +
   theme_minimal() +
   theme(legend.position = "none")
 
-The histogram indicates that the bulk of countries fall into the 5-7 range with happiness levels fairly good to great across the world. A good amount of countries fall far left of this range creating a left tail, however, a small amount fall to the right of the 8. The data is somewhat right skewing.
-
+The histogram indicates that the bulk of countries fall into the 5-7 range with happiness levels fairly good to great across the world. A good amount of countries fall far left of this range creating a left tail, however, a small amount fall to the right of the 8. The data is somewhat right skewed in that more countries exceed the mean than fail to meet it. This implies that people across the globe are not overly happy, but they're also not overtly unhappy.
 ggplot(happiness_clean, aes(x = score)) +
   geom_histogram(binwidth = 0.5, fill = "steelblue", color = "white", alpha = 0.8) +
   labs(
@@ -282,6 +281,7 @@ The link above also references "bibtex" files. These are also extremely convenie
 https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
 https://covid.ourworldindata.org/data/owid-covid-data.csv
 https://worldhappiness.report/ed/2023/#appendices-and-data
+
 
 
 

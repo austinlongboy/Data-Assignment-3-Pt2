@@ -159,6 +159,10 @@ covid_happy <- covid_clean |>
   left_join(happiness_clean, by = "country")
 
 # Plot
+#The chart suggests that those countries with the highest cases cluster into a smaller range of much higher happiness scores, about 6-7. Yet for those countries with lower #cases, happiness scores are all over the place from very low happiness to very high. This means that there is a positive correlation that at least encourages one to understand #the possibility that higher case countries had better healthcare systems in place, economic support or social support to encourage testing/reporting and also encouraged higher levels of happiness during the pandemic.
+
+#Therefore, while it's not a concrete linear response, the pictures imply that countries that were able to successfully manage high case numbers and report them also were able #to maintain such happiness scores.
+
 ggplot(covid_happy, aes(x = total_cases, y = score)) +
   geom_point(alpha = 0.6) +
   labs(
@@ -167,6 +171,8 @@ ggplot(covid_happy, aes(x = total_cases, y = score)) +
     y = "Happiness Score"
   ) +
   theme_minimal()
+
+According to the chart, as of the present date, the sea-ice extent of the southern hemisphere far outweighs the sea-ice extent of the northern hemisphere. However, the northern hemisphere does still have a decent amount of ice, as projected, but not to a percentage that would render it comparable to the southern hemisphere amount. Thus, over time, there exists an inequitable, hemispheric distribution of sea-ice extent because where it is located, Antarctica, is so much larger than where it is (in the Arctic). It makes the bars so stark that they don't need much additional explanation.
 
 ggplot(ice_clean, aes(x = hemisphere, y = Extent, fill = hemisphere)) +
   geom_col() +
@@ -177,6 +183,8 @@ ggplot(ice_clean, aes(x = hemisphere, y = Extent, fill = hemisphere)) +
   ) +
   theme_minimal() +
   theme(legend.position = "none")
+
+The histogram indicates that the bulk of countries fall into the 5-7 range with happiness levels fairly good to great across the world. A good amount of countries fall far left of this range creating a left tail, however, a small amount fall to the right of the 8. The data is somewhat right skewing.
 
 ggplot(happiness_clean, aes(x = score)) +
   geom_histogram(binwidth = 0.5, fill = "steelblue", color = "white", alpha = 0.8) +
@@ -274,6 +282,7 @@ The link above also references "bibtex" files. These are also extremely convenie
 https://arctic.noaa.gov/report-card/report-card-2023/sea-ice-2023/
 https://covid.ourworldindata.org/data/owid-covid-data.csv
 https://worldhappiness.report/ed/2023/#appendices-and-data
+
 
 
 
